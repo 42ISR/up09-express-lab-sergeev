@@ -1,0 +1,25 @@
+meta {
+  name: Create Book
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/books
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "title": "New Book",
+    "author": "Test Author",
+    "year": 2026,
+    "genre": "Fantasy",
+    "description": "A test book."
+  }
+}

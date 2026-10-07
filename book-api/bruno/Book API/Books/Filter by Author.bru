@@ -1,0 +1,11 @@
+meta {
+  name: Filter Books By Author
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/books?author=George%20Orwell
+  body: none
+  auth: none
+}
