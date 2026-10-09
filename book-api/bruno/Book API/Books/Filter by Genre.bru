@@ -1,0 +1,11 @@
+meta {
+  name: Filter Books By Genre
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/books?genre=Fantasy
+  body: none
+  auth: none
+}

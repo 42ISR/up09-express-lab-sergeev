@@ -1,0 +1,25 @@
+meta {
+  name: Update Book
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/api/books/1
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "title": "1984 Updated",
+    "author": "George Orwell",
+    "year": 1949,
+    "genre": "Dystopian",
+    "description": "Updated description."
+  }
+}
